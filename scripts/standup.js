@@ -178,7 +178,7 @@ module.exports = function(robot) {
         var room = findRoom(msg);
 
         saveStandup(room, time);
-        msg.send("Ok, from now on I'll remind this room to do a standup every weekday at " + time);
+        msg.send("Ok, from now on I'll remind this room to do a standup every weekday at " + time + "Eastern Time.");
     });
 
     robot.respond(/create standup ((?:[01]?[0-9]|2[0-4]):[0-5]?[0-9]) UTC([+-][0-9])$/i, function(msg) {
@@ -198,7 +198,7 @@ module.exports = function(robot) {
             msg.send("Well this is awkward. You haven't got any standups set :-/");
         }
         else {
-            var standupsText = ["Here's your standups:"].concat(_.map(standups, function (standup) {
+            var standupsText = ["Here are your standups:"].concat(_.map(standups, function (standup) {
                 if (standup.utc) {
                     return standup.time + " UTC" + standup.utc;
                 } else {
@@ -216,7 +216,7 @@ module.exports = function(robot) {
             msg.send("No, because there aren't any.");
         }
         else {
-            var standupsText = ["Here's the standups for every room:"].concat(_.map(standups, function (standup) {
+            var standupsText = ["Here are the standups for every room:"].concat(_.map(standups, function (standup) {
                 return "Room: " + standup.room + ", Time: " + standup.time;
             }));
 
