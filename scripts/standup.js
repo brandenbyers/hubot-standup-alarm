@@ -31,12 +31,8 @@ module.exports = function(robot) {
 
     // Constants.
     var STANDUP_MESSAGES = [
-        "Standup time!",
-        "Time for standup, y'all.",
-        "It's standup time once again!",
-        "Get up, stand up (it's time for our standup)",
-        "Standup time. Get up, humans",
-        "Standup time! Now! Go go go!"
+        "https://i.imgflip.com/n1bb8.jpg",
+        "http://www.agileconnection.com/sites/default/files/shared/1004457_10151720611052296_1007545881_n.jpg"
     ];
 
     var PREPEND_MESSAGE = process.env.HUBOT_STANDUP_PREPEND || "";
