@@ -35,7 +35,8 @@ module.exports = function(robot) {
         "http://www.agileconnection.com/sites/default/files/shared/1004457_10151720611052296_1007545881_n.jpg",
         "https://i.imgflip.com/n1qn2.jpg",
         "https://i.imgflip.com/n1qrf.jpg",
-        "https://i.imgflip.com/n1qyk.jpg"
+        "https://i.imgflip.com/n1qyk.jpg",
+        "https://i.imgflip.com/n1r4y.jpg"
     ];
 
     var PREPEND_MESSAGE = process.env.HUBOT_STANDUP_PREPEND || "";
