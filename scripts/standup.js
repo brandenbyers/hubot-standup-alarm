@@ -31,12 +31,14 @@ module.exports = function(robot) {
 
     // Constants.
     var STANDUP_MESSAGES = [
-        "https://i.imgflip.com/n1bb8.jpg",
-        "http://www.agileconnection.com/sites/default/files/shared/1004457_10151720611052296_1007545881_n.jpg",
-        "https://i.imgflip.com/n1qn2.jpg",
-        "https://i.imgflip.com/n1qrf.jpg",
-        "https://i.imgflip.com/n1qyk.jpg",
-        "https://i.imgflip.com/n1r4y.jpg"
+        "It's STANDUP TIME! La la la la la la...la la la la la la.\nhttps://i.imgflip.com/n1bb8.jpg",
+        "There's no earthly way of knowing. Which direction they are going...\nThere's no knowing where they're rowing...\nIt's time for standup!\nhttp://www.agileconnection.com/sites/default/files/shared/1004457_10151720611052296_1007545881_n.jpg",
+        "It's standup time right meow.\nhttps://i.imgflip.com/n1qn2.jpg",
+        "Stand up. Stand up.\nhttps://i.imgflip.com/n1qrf.jpg",
+        "Of course you can have another cupcake! But first; it's standup time.\nhttps://i.imgflip.com/n1qyk.jpg",
+        "Slides are for suckers! Just ride on my gut to standup!\nhttps://i.imgflip.com/n1r4y.jpg",
+        "Standup time\nC'mon, grab your co-workers\nWe'll go to very distant lands\nWith Hubot the bot\nAnd you weird humans\nThe standups'll never end\nIt's Standup Time!\nhttp://i.imgflip.com/n2uf8.gif",
+        "Standup.\nhttps://i.imgflip.com/n2vj1.jpg"
     ];
 
     var PREPEND_MESSAGE = process.env.HUBOT_STANDUP_PREPEND || "";
