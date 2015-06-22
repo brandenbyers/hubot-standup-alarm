@@ -25,6 +25,7 @@
 /*jslint node: true*/
 var cronJob = require("cron").CronJob;
 var chrono = require('chrono-node');
+var moment = require('moment');
 var _ = require("underscore");
 
 module.exports = function(robot) {
@@ -182,6 +183,7 @@ module.exports = function(robot) {
     robot.respond(/create standup (.{3,})$/i, function(msg) {
         var naturalTime = msg.match[1];
         var timeStamp = chrono.parseDate(naturalTime);
+        var momentTime = moment(timeStamp);
         var minutes = '';
         if(timeStamp.getMinutes() < 10) {
           minutes = '0' + timeStamp.getMinutes().toString();
@@ -205,7 +207,7 @@ module.exports = function(robot) {
         // TODO: Convert 24 hour time to 12 hour
 
         saveStandup(room, time);
-        msg.send("Ok, from now on I'll remind this room to do a standup every weekday at " + time + " Eastern Time.");
+        msg.send("Ok, from now on I'll remind this room to do a standup every weekday at " + momentTime.format("h:m A") + " Eastern Time.");
     });
 
     robot.respond(/create standup ((?:[01]?[0-9]|2[0-4]):[0-5]?[0-9]) UTC([+-][0-9])$/i, function(msg) {
