@@ -24,6 +24,7 @@
 
 /*jslint node: true*/
 var cronJob = require("cron").CronJob;
+var chrono = require('chrono-node');
 var _ = require("underscore");
 
 module.exports = function(robot) {
@@ -178,12 +179,32 @@ module.exports = function(robot) {
         }
     });
 
-    robot.respond(/create standup ((?:[01]?[0-9]|2[0-4]):[0-5]?[0-9])$/i, function(msg) {
-        var time = msg.match[1];
+    robot.respond(/create standup (.{3,})$/i, function(msg) {
+        var naturalTime = msg.match[1];
+        var timeStamp = chrono.parseDate(naturalTime);
+        var minutes = '';
+        if(timeStamp.getMinutes() < 10) {
+          minutes = '0' + timeStamp.getMinutes().toString();
+        } else {
+          minutes = timeStamp.getMinutes().toString();
+        }
+        var time = timeStamp.getHours().toString() + ':' + minutes;
+
+        // TODO: ADD acceptance of UTC
+
+        console.log("######################################");
+        console.log("NATURAL TIME:", naturalTime);
+        console.log("TIME STAMP:", timeStamp);
+        console.log("MINUTES:", minutes);
+        console.log("TIME:", time);
+        console.log("######################################");
 
         var room = findRoom(msg);
 
-        saveStandup(room, time);
+        // TODO: Remove eastern from response
+        // TODO: Convert 24 hour time to 12 hour
+
+        saveStandup(room, time, utc);
         msg.send("Ok, from now on I'll remind this room to do a standup every weekday at " + time + " Eastern Time.");
     });
 
