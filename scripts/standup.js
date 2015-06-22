@@ -231,7 +231,7 @@ module.exports = function(robot) {
                 if (standup.utc) {
                     return standup.time + " UTC" + standup.utc;
                 } else {
-                    return standup.time;
+                    return standup.time + " ET";
                 }
             }));
 
