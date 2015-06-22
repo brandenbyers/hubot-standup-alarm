@@ -192,19 +192,12 @@ module.exports = function(robot) {
         }
         var time = timeStamp.getHours().toString() + ':' + minutes;
 
-        // TODO: ADD acceptance of UTC
-
         console.log("######################################");
         console.log("NATURAL TIME:", naturalTime);
         console.log("TIME STAMP:", timeStamp);
-        console.log("MINUTES:", minutes);
-        console.log("TIME:", time);
         console.log("######################################");
 
         var room = findRoom(msg);
-
-        // TODO: Remove eastern from response
-        // TODO: Convert 24 hour time to 12 hour
 
         saveStandup(room, time);
         msg.send("Ok, from now on I'll remind this room to do a standup every weekday at " + momentTime.format("h:mm A") + " Eastern Time.");
