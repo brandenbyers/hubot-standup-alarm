@@ -204,7 +204,7 @@ module.exports = function(robot) {
         // TODO: Remove eastern from response
         // TODO: Convert 24 hour time to 12 hour
 
-        saveStandup(room, time, utc);
+        saveStandup(room, time);
         msg.send("Ok, from now on I'll remind this room to do a standup every weekday at " + time + " Eastern Time.");
     });
 
