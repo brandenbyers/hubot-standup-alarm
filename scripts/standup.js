@@ -207,7 +207,7 @@ module.exports = function(robot) {
         // TODO: Convert 24 hour time to 12 hour
 
         saveStandup(room, time);
-        msg.send("Ok, from now on I'll remind this room to do a standup every weekday at " + momentTime.format("h:m A") + " Eastern Time.");
+        msg.send("Ok, from now on I'll remind this room to do a standup every weekday at " + momentTime.format("h:mm A") + " Eastern Time.");
     });
 
     robot.respond(/create standup ((?:[01]?[0-9]|2[0-4]):[0-5]?[0-9]) UTC([+-][0-9])$/i, function(msg) {
