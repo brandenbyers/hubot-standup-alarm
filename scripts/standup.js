@@ -56,7 +56,7 @@ module.exports = function(robot) {
         "Watch out...it's Standup time.\nhttp://media.giphy.com/media/pXPOApWXuJaMw/giphy.gif",
         "It's mind-blowing Standup time.\nhttp://media.giphy.com/media/KUb97RUwAsuf6/giphy.gif",
         "You'll have to hold it until after Standup.\nhttp://media.giphy.com/media/q22xX098bWU/giphy.gif",
-        "Standup party time.\nhttp://giphy.com/gifs/taco-transparent-fun-3KAxGKtEQpTmo",
+        "Standup party time.\nhttp://media3.giphy.com/media/3KAxGKtEQpTmo/giphy.gif",
         "The power of voodoo.\nWho do?\nYou do.\nDo what?\nSTANDUP\nhttp://media.giphy.com/media/Wer0THzNFUoYE/giphy.gif",
         "Hold on to your heads, it is Standup time.\nhttp://media.giphy.com/media/10Kt9EtOLQSXPa/giphy.gif",
         "No complaining. It's time for Standup.\nhttp://media.giphy.com/media/N72vsMfkYbHry/giphy.gif"
